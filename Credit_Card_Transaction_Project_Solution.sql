@@ -1,6 +1,20 @@
+/**************************Insert table syntax***********************************************/
+create table credit_card_transaction
+(
+transaction_id	int,
+city varchar(20),
+transaction_date Date,
+card_type varchar(20),
+exp_type varchar(20),
+gender varchar(10),
+amount float);
 
+/**********************after insert table to check all column names in table query*******************************/
+select * from credit_card_transaction
 
+ /****************************End the select table logic*********************************************************/
 
+ /*************************Now the next step to solving questions logic*****************************************/
 --1- write a query to print top 5 cities with highest spends and their percentage contribution of total credit card spends 
 
 with cte as (
@@ -115,3 +129,6 @@ days500,count(*) countof from cte
 group by city
 having count(*)=2
 order by days500
+
+/****************************************End logic of after resolving all questions***************************************************/
+
